@@ -15,7 +15,7 @@ public class Board {
 
     /**
      * Creates a new board.
-     *
+     * 创建一个网格
      * @param grid
      *            The grid of squares with grid[x][y] being the square at column
      *            x, row y.

@@ -19,7 +19,7 @@ public class BoardFactory {
     /**
      * Creates a new BoardFactory that will create a board with the provided
      * background sprites.
-     *
+     * 创建一个新的BoardFactory，它将使用提供的背景精灵。
      * @param spriteStore
      *            The sprite store providing the sprites for the background.
      */
@@ -29,7 +29,7 @@ public class BoardFactory {
 
     /**
      * Creates a new board from a grid of cells and connects it.
-     *
+     * 从单元格网格创建新的板并将其连接。
      * @param grid
      *            The square grid of cells, in which grid[x][y] corresponds to
      *            the square at position x,y.
@@ -59,7 +59,7 @@ public class BoardFactory {
 
     /**
      * Creates a new square that can be occupied by any unit.
-     *
+     * 创建可以被任何单位占用的新正方形
      * @return A new square that can be occupied by any unit.
      */
     public Square createGround() {
@@ -77,7 +77,7 @@ public class BoardFactory {
 
     /**
      * A wall is a square that is inaccessible to anyone.
-     *
+     * 墙是无法接近的方格
      * @author Jeroen Roosen
      */
     private static final class Wall extends Square {
@@ -110,7 +110,7 @@ public class BoardFactory {
 
     /**
      * A ground square is a square that is accessible to anyone.
-     *
+     * ground是任何人可以到达的方格
      * @author Jeroen Roosen
      */
     private static final class Ground extends Square {
