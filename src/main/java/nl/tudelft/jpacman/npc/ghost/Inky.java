@@ -25,6 +25,11 @@ import java.util.Optional;
  * far ahead of Pac-Man). Inky is affected by a similar targeting bug that
  * affects Speedy. When Pac-Man is moving or facing up, the spot Inky uses to
  * draw the line is two squares above and left of Pac-Man.
+ * Inky拥有最复杂的移动路线。Inky考虑了两件事：Blinky的位置和位置在吃豆人前面两格。
+ * Inky画了一个从Blinky到吃豆人前面两个正方形的点的线把那条线延长两倍。因此，如果Inky与Blinky并排
+ * 当他们在吃豆人后面的时候，Inky此时通常会跟着Blink。但是如果Inky在吃豆人前面，而Blinky远远地在他后面，
+ * Inky倾向于离开吃豆人（远远领先于吃豆人时）。Inky受到一个类似的目标bug的影响
+ * 影响速度。当吃豆人移动或面朝上时，Inky用来在吃豆人的左上方画两个正方形。
  * <p>
  * Source: http://strategywiki.org/wiki/Pac-Man/Getting_Started
  * </p>
@@ -79,6 +84,9 @@ public class Inky extends Ghost {
      * squares away from Pac-Man (B). Then determine the shortest path from A to
      * B regardless of terrain and walk that same path from B. This is the
      * destination.
+     * 为了在jpacman中实际实现这一点，我们有以下近似值：
+     * 首先确定Blinky的占据的方格和平方2远离吃豆人（B）。然后确定从A到B的最短路径
+     * 不管地形如何，从B开始走同一条路。这就是目的地。
      * </p>
      */
     @Override
